@@ -1,42 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-      <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>北海道歯科産業院内ツール制作</title>
-         <!--↓CSSリンク-->
-         <link rel="stylesheet" href="style.css">
-         <!--↓フォントNotoSansJP-->
-	     <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-         <!--↓フォントZen Kurenaido-->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Sans+JP:wght@100..900&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-         <!--↓フォントM PLUS 1p-->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOMODA CHIHIRO | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-      <body>
-           <!--トップ-->
-         <header>
-           </header>
-           <section id="top">
-            <p>こもだちひろ</p>
-            
-           </section>
-           
-        
-           
-           <!--フッター-->
-           <footer id="footer">
+  <!-- Sticky CTA -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__name">KOMODA CHIHIRO</span>
+        <span class="brand__role">Graphic Designer</span>
+      </div>
+      <nav class="topbar__nav">
+        <a href="#works">Works</a>
+        <a href="#service">Service</a>
+        <a href="#about">About</a>
+        <a class="btn btn--primary" href="#contact">制作相談する</a>
+      </nav>
+    </div>
+  </header>
 
-        </footer>
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">商業デザイン / 販促設計</p>
+          <h1 class="hero__title">
+            伝わる。選ばれる。<br>行動につながるデザイン。
+          </h1>
+          <p class="hero__lead">
+            商業施設・飲食店の販促物を中心に、情報設計と視認性を重視したデザインを制作しています。<br>
+            チラシ / パンフレット / パッケージ / メニュー / LPまで一貫対応可能です。
+          </p>
 
+          <ul class="pillrow">
+            <li class="pill">飲食・店舗販促</li>
+            <li class="pill">商業施設</li>
+            <li class="pill">パッケージ</li>
+            <li class="pill">印刷〜LP</li>
+          </ul>
 
-        
-      </body>
+          <div class="cta">
+            <a class="btn btn--primary" href="#contact">制作の相談をする</a>
+            <a class="btn btn--ghost" href="#works">作品を見る</a>
+          </div>
+
+          <p class="micro">
+            ※短納期案件・継続制作もご相談ください（折込/毎月更新などの運用経験あり）
+          </p>
+        </div>
+
+        <!-- replace images -->
+        <div class="hero__mosaic">
+          <img class="m1" src="img/furano.jpg" alt="work image 1">
+          <img class="m2" src="img/aix.jpg" alt="work image 2">
+          <img class="m3" src="img/student.jpg" alt="work image 3">
+          <img class="m4" src="img/yuruwell.jpg" alt="work image 4">
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Value -->
+    <section class="value" id="value">
+      <div class="container">
+        <h2 class="section-title">Why me</h2>
+        <div class="cards3">
+          <article class="card">
+            <h3>情報設計</h3>
+            <p>「誰に・何を・どう行動してほしいか」を整理し、迷わない導線と視認性で構成します。</p>
+          </article>
+          <article class="card">
+            <h3>商業デザイン経験</h3>
+            <p>飲食・地域・商品など、実際の集客/販売に関わる制作経験があります。</p>
+          </article>
+          <article class="card">
+            <h3>印刷〜LPまで一貫</h3>
+            <p>印刷物とWEBのトーン統一も可能。制作と運用の“現場目線”で整えます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section class="works" id="works">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Works</h2>
+          <p class="section-sub">強いものだけ、少数精鋭で見せます（画像差し替えでOK）。</p>
+        </div>
+
+        <div class="workgrid">
+
+          <article class="workcard">
+            <div class="workcard__img">
+              <img src="img/furano.jpg" alt="富良野ジンギスカン パッケージ">
+            </div>
+            <div class="workcard__body">
+              <h3>富良野ジンギスカン パッケージ</h3>
+              <dl class="meta">
+                <div><dt>Role</dt><dd>ロゴ / パッケージ</dd></div>
+                <div><dt>Focus</dt><dd>北海道ブランド / 贈答 & 自宅用の選びやすさ</dd></div>
+              </dl>
+              <p>
+                催事出展をきっかけに“商品として選ばれる”見え方へ設計。
+                富良野の地域性を前面に出し、アウトドアにも馴染むトーンに整えました。
+              </p>
+            </div>
+          </article>
+
+          <article class="workcard">
+            <div class="workcard__img">
+              <img src="img/aix.jpg" alt="AIX 居酒屋チラシ">
+            </div>
+            <div class="workcard__body">
+              <h3>AIX 居酒屋チラシ</h3>
+              <dl class="meta">
+                <div><dt>Role</dt><dd>折込チラシ</dd></div>
+                <div><dt>Focus</dt><dd>埋もれない視認性 / ブランド定着</dd></div>
+              </dl>
+              <p>
+                折込チラシを4年間担当。毎月複数本の制作を行い、
+                “派手＝正解”ではなく、読みやすさと訴求の優先順位で反応を狙いました。
+              </p>
+            </div>
+          </article>
+
+          <article class="workcard">
+            <div class="workcard__img">
+              <img src="img/student.jpg" alt="学生会館 パンフレット">
+            </div>
+            <div class="workcard__body">
+              <h3>学生会館 パンフレット</h3>
+              <dl class="meta">
+                <div><dt>Role</dt><dd>パンフレット</dd></div>
+                <div><dt>Focus</dt><dd>学生×保護者の意思決定設計</dd></div>
+              </dl>
+              <p>
+                住むのは学生、決めるのは保護者。双方の視点を統合し、
+                “ここなら安心”が伝わる情報設計と見せ方を重視しました。
+              </p>
+            </div>
+          </article>
+
+          <article class="workcard">
+            <div class="workcard__img">
+              <img src="img/yuruwell.jpg" alt="ゆるウェル LP">
+            </div>
+            <div class="workcard__body">
+              <h3>ゆるウェル LP</h3>
+              <dl class="meta">
+                <div><dt>Role</dt><dd>LPデザイン / コーディング</dd></div>
+                <div><dt>Focus</dt><dd>自然体の健康習慣 / 体験導線</dd></div>
+              </dl>
+              <p>
+                “がんばりすぎない健康”を軸に、やわらかいトーンで設計。
+                情報の圧を下げつつ、自然に行動できる導線を整えました。
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Process</h2>
+          <p class="section-sub">依頼側が不安になるポイントを先に潰しておくと、案件が決まりやすいです。</p>
+        </div>
+
+        <ol class="steps">
+          <li><span class="step__n">01</span><div><h3>ヒアリング</h3><p>目的・ターゲット・媒体・納期を確認します。</p></div></li>
+          <li><span class="step__n">02</span><div><h3>情報整理</h3><p>伝える順番と優先度を整理し、構成案に落とします。</p></div></li>
+          <li><span class="step__n">03</span><div><h3>デザイン制作</h3><p>媒体に合わせて視認性とトーンを設計し制作します。</p></div></li>
+          <li><span class="step__n">04</span><div><h3>調整・納品</h3><p>印刷入稿データ / Webデータで納品。運用案件も相談OK。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="service" id="service">
+      <div class="container">
+        <h2 class="section-title">Service</h2>
+        <div class="service__grid">
+          <div class="service__box">
+            <h3>Graphic</h3>
+            <ul>
+              <li>チラシ / フライヤー</li>
+              <li>パンフレット / 冊子</li>
+              <li>メニュー / POP</li>
+              <li>パッケージ / ロゴ</li>
+            </ul>
+          </div>
+          <div class="service__box">
+            <h3>Web</h3>
+            <ul>
+              <li>LPデザイン</li>
+              <li>Webデザイン</li>
+              <li>HTML / CSS コーディング</li>
+              <li>トーン統一（紙×Web）</li>
+            </ul>
+          </div>
+          <div class="service__box">
+            <h3>Fit</h3>
+            <ul>
+              <li>飲食 / 店舗販促</li>
+              <li>商業施設 / 催事</li>
+              <li>地域・商品PR</li>
+              <li>継続制作（毎月更新）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container about__grid">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>
+            26歳で財務経理事務からデザイナーへ転身。札幌の広告会社で商業デザインを経験しました。<br>
+            現在はインハウスデザイナーとして働きながら、フリーでも活動しています。
+          </p>
+          <p class="micro">
+            得意：情報整理 / 視認性 / 現場運用を想定した販促制作
+          </p>
+        </div>
+        <div class="about__note">
+          <h3>お願い（スムーズに進めるために）</h3>
+          <ul>
+            <li>目的（集客/販売/認知）</li>
+            <li>ターゲット（年齢層/来店動機）</li>
+            <li>媒体（折込/店頭/WEBなど）</li>
+            <li>必須情報（価格/期間/地図/QR等）</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact" id="contact">
+      <div class="container contact__box">
+        <h2>Contact</h2>
+        <p>制作のご相談はお気軽にご連絡ください。内容が固まっていなくても大丈夫です。</p>
+
+        <div class="contact__row">
+          <a class="btn btn--primary" href="mailto:YOUR_EMAIL_HERE">メールで相談</a>
+          <a class="btn btn--ghost" href="https://instagram.com/YOUR_ID_HERE" target="_blank" rel="noopener">Instagram DM</a>
+        </div>
+
+        <p class="micro">※返信目安：1〜2営業日（目安）</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <small>© KOMODA CHIHIRO</small>
+      </div>
+    </footer>
+
+  </main>
+</body>
 </html>
