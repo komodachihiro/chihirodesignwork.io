@@ -201,6 +201,28 @@ body::after{
   font-weight: 500;
 }
 
+/* 初期（PC） */
+.sp-br{
+  display: none;
+}
+
+.pc-br{
+  display: block;
+}
+
+/* スマホ */
+@media (max-width: 768px){
+  
+  .sp-br{
+    display: block;
+  }
+
+  .pc-br{
+    display: none;
+  }
+
+}
+
 /* 左の線で“見出しラベル感” */
 .eyebrow::before,
 .hero-category::before{
