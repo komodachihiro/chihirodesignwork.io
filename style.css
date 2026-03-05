@@ -188,6 +188,29 @@ body::after{
 /* ---------- Hero ---------- */
 .hero{ padding-top: 56px; }
 
+/* 置き換え：eyebrow / hero-category どちらでもOK */
+.eyebrow,
+.hero-category{
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  font-size: 16px;
+  letter-spacing: .08em;
+  color: rgba(17,19,24,.55);
+  font-weight: 500;
+}
+
+/* 左の線で“見出しラベル感” */
+.eyebrow::before,
+.hero-category::before{
+  content:"";
+  width: 34px;
+  height: 1px;
+  background: rgba(17,19,24,.28);
+}
+
+
 .hero__grid{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -195,16 +218,7 @@ body::after{
   align-items: center;
 }
 
-.eyebrow{
-  display:inline-block;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 12px;
-  margin: 0 0 14px;
-  background: rgba(255,255,255,.65);
-}
+
 
 .hero__title{
   font-size: 46px;
@@ -253,16 +267,10 @@ body::after{
 .hero__mosaic img{
   position:absolute;
   border-radius: 18px;
-  border: 1px solid var(--line2);
-  background: rgba(255,255,255,.60);
   object-fit: cover;
-  box-shadow: var(--shadow2);
 }
 
-.hero__mosaic .m1{ width: 58%; height: 54%; left: 0; top: 0; }
-.hero__mosaic .m2{ width: 42%; height: 36%; right: 0; top: 8%; }
-.hero__mosaic .m3{ width: 46%; height: 42%; left: 12%; bottom: 0; }
-.hero__mosaic .m4{ width: 40%; height: 52%; right: 6%; bottom: 0; }
+
 
 @media (max-width: 980px){
   .hero__grid{ grid-template-columns: 1fr; }
@@ -423,16 +431,139 @@ body::after{
   .about__grid{ grid-template-columns: 1fr; }
 }
 
-/* ---------- Contact ---------- */
-.contact__box{
-  border-radius: var(--radius2);
-  padding: 26px;
+/* =========================
+   Contact 強調セクション
+========================= */
+/* =========================
+   Designer Contact Section
+========================= */
+
+.contact{
+  padding: 120px 0;
+  position: relative;
 }
 
-.contact__box h2{ margin: 0 0 10px; letter-spacing:.02em; }
-.contact__box p{ margin: 0 0 14px; color: var(--muted); }
-.contact__row{ display:flex; gap: 12px; flex-wrap: wrap; }
+/* グラデーション背景 */
+.contact__box{
+  position: relative;
+  overflow: hidden;
 
+  background: linear-gradient(
+    135deg,
+    #1c1f2b 0%,
+    #2b2f45 40%,
+    #3a3558 100%
+  );
+
+  color: #fff;
+  border-radius: 28px;
+  padding: 70px 80px;
+
+  max-width: 1000px;
+  margin: 0 auto;
+
+  box-shadow:
+  0 40px 120px rgba(0,0,0,.35);
+
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* 光のグラデーション */
+.contact__box::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+
+  background:
+  radial-gradient(
+    circle at 20% 20%,
+    rgba(255,255,255,.15),
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(130,140,255,.15),
+    transparent 60%
+  );
+
+  pointer-events:none;
+}
+
+/* タイトル */
+.contact__box h2{
+  font-size: 36px;
+  margin-bottom: 16px;
+  letter-spacing:.02em;
+}
+
+/* 説明文 */
+.contact__box p{
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+  margin-bottom: 34px;
+}
+
+/* ボタンエリア */
+.contact__row{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* メインボタン */
+.contact__row .btn--primary{
+
+  background:#fff;
+  color:#111;
+
+  border:none;
+
+  padding:16px 26px;
+  border-radius:999px;
+
+  font-weight:600;
+
+  transition:.25s;
+}
+
+.contact__row .btn--primary:hover{
+  transform: translateY(-3px);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* サブボタン */
+.contact__row .btn--ghost{
+
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+  background:transparent;
+
+  padding:16px 26px;
+  border-radius:999px;
+
+  transition:.25s;
+}
+
+.contact__row .btn--ghost:hover{
+  background:rgba(255,255,255,.1);
+}
+
+/* SP */
+@media(max-width:768px){
+
+.contact__box{
+  padding:50px 40px;
+}
+
+.contact__box h2{
+  font-size:30px;
+}
+
+.contact__box p{
+  font-size:16px;
+}
+
+}
 /* ---------- Footer ---------- */
 .footer{
   padding: 24px 0 40px;
@@ -444,4 +575,112 @@ body::after{
 /* ---------- Optional: reduce motion if needed ---------- */
 @media (prefers-reduced-motion: reduce){
   .btn{ transition: none; }
+}
+
+/* =========================
+   Mobile spacing
+========================= */
+
+/* =========================
+   Mobile Layout Adjust
+========================= */
+
+@media (max-width:768px){
+
+/* セクション余白 */
+section{
+  padding: 56px 0;
+}
+
+/* Hero */
+.hero{
+  padding-top: 36px;
+}
+
+/* Contact */
+.contact{
+  padding: 70px 0;
+}
+
+/* Contact box */
+.contact__box{
+  padding: 40px 28px;
+}
+
+/* タイトル */
+.hero__title{
+  font-size: 34px;
+}
+
+/* Worksカード間 */
+.cards{
+  gap: 18px;
+}
+
+/* モザイク画像 */
+.hero__mosaic{
+  height: 320px;
+}
+
+/* ボタンエリア */
+.cta{
+  gap:10px;
+}
+
+}
+/* =========================
+   Hero PC: image on right (HTMLそのまま)
+========================= */
+@media (min-width: 981px){
+
+  /* 外側は2カラムのまま（既にあれば上書き） */
+  .hero__grid{
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* hero__copy だけで2カラム作るので1列に */
+  }
+
+  /* hero__copyを2カラム化：左テキスト / 右画像 */
+  .hero__copy{
+    display: grid !important;
+    grid-template-columns: 1.1fr .9fr !important;
+    column-gap: 38px !important;
+    align-items: start;
+  }
+
+  /* テキスト類は左カラム固定 */
+  .eyebrow,
+  .hero__title,
+  .hero__lead,
+  .cta,
+  .micro{
+    grid-column: 1 !important;
+  }
+
+  /* 画像ブロックは右カラム */
+  .hero__mosaic{
+    grid-column: 2 !important;
+    grid-row: 1 / span 6;   /* 右に縦で収める */
+    height: auto !important;
+    margin: 0 !important;
+    align-self: center;
+  }
+
+  /* ★absolute解除（これがないと崩れる） */
+  .hero__mosaic img{
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 18px;
+    object-fit: cover;
+    }
+
+  /* m1の位置/サイズ指定が残ってても無効化 */
+  .hero__mosaic .m1{
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
 }
